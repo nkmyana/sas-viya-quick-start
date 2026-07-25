@@ -9,7 +9,7 @@
 
 /* SELECT FIRST 20 ROWS */
 %if &selection=FIRST %then %do;
-	title1 color="blue" "Sample from SASHELP.HOMEEQUITY";
+	title1 color="red" "Sample from SASHELP.HOMEEQUITY";
 	title2 height=3 "First 20 of &N Rows";
 	data sample;
 	    set sashelp.homeequity(obs=20 keep=Bad Loan MortDue Value);
@@ -19,7 +19,7 @@
 /* SELECT RANDOM SAMPLE OF 20 ROWS */
 
 %else %do;
-	title1 color="blue" "Sample from SASHELP.HOMEEQUITY";
+	title1 color="red" "Sample from SASHELP.HOMEEQUITY";
 	title2 height=3 "Random Sample 20 of &N Rows";
 	
 	proc surveyselect data=sashelp.homeequity(keep=Bad Loan MortDue Value) 
